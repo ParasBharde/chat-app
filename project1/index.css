@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700&display=swap');
+
+:root {
+    --lighter-purple: rgba(103, 75, 175, 0.5);
+    --purple: #674baf;
+    --white: #ffffff;
+    --coral: lightcoral;
+}
+
+body {
+    background-color: var(--purple);
+    margin: 0px 30px;
+}
+
+.white-color {
+    color: var(--white);
+
+}
+/*-----------------Header Area-------------*/
+.navbar {
+    margin: 48px 42px;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+.display-flex {
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+    /* border: 2px solid; */
+}
+
+/*---------Header Text-------------------*/
+.site-title {
+    margin-left: 13px;
+    font-size: 24px;
+}
+
+/*---------Header Text End-------------------*/
+
+/*---------image Section-----------------*/
+.project-image {
+    width: 450px;
+}
+
+.project-image:hover {
+    transform: scaleX(-1);
+}
+/*---------image Section End-----------------*/
+
+
+/* ===============Body Area ---------------*/
+.central-content-text {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.body-container {
+    display: flex;
+    justify-content: center;
+}
+
+.body-content {
+    width: 800px;
+}
+
+.central-component-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 23px;
+
+}
+
+.central-content-descripted {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.central-component-button {
+    height: 33px;
+    width: 120px;
+    margin-top: 12px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 45px;
+    border: 3px solid;
+    font-weight: bold;
+    color: var(--lighter-purple);
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 1s;
+}
+
+.central-component-button:hover {
+    animation: pulsate 1s ease-in-out;
+    color: var(--purple);
+    /* width: 150px; */
+    /* height: 40px; */
+    transform: Scale(1.2);
+}
+/*------------------Body Area End----------------*/
+
+/*------------Button Animation --------------------*/
+@keyframes pulsate {
+    0% {
+        box-shadow: 0 0 25px #5ddcff,
+            0 0 50px #0fbd2f;
+    }
+}
+/*=============Button Animation End===============*/
+
+/*-------------Footer Area----------------*/
+.footer-icons {
+    display: flex;
+    /* grid-template-columns: auto auto auto; */
+    justify-content: flex-end;
+    cursor: pointer;
+
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 44px;
+   margin-bottom: 10px;
+
+    animation: float 5s ease-in-out infinite;
+}
+
+.fa-instagram {
+    animation-delay: 1s;
+}
+
+.fa-twitter {
+    animation-delay: 2s;
+}
+/*------------Icon Animation --------------------*/
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+/*------------Icon Animation END--------------------*/
+
+.fa-brands {
+    padding: 8px;
+}
+
+.site-footer {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 94%;
+}
+/*------------Footer Area End-------------*/
+
+
+
+/*------------Media Query(Mobile View)--------------*/
+@media only screen and (max-width: 700px) 
+{
+
+    .display-flex {
+        justify-content: center;
+    }
+
+    .navbar {
+        width: 90vw;
+    }
+
+    .body-content {
+        display: block;
+    }
+    .image-container{
+        display: flex;
+        justify-content: center;
+        
+        padding-left: 16vw;
+    }
+    .central-content-text{
+        width: 100vw;
+        margin-right: 0px;
+        margin-left: 33vw;
+    }
+    .footer-icons{
+        /* display: grid; */
+        justify-content: center;
+        /* margin-right: 0vw; */
+    }
+    .central-component-button{
+        transition: transform 1s;
+    }
+    .central-component-button:hover{
+        transform: translateX(110px);
+    }
+    body{
+        background-color: var(--coral);
+    }
+    
+}
+/*----------========Media Query End========-----------------*/
